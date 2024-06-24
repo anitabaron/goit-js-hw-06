@@ -10,23 +10,15 @@ class StringBuilder {
   }
 
   padEnd(str) {
-    this.#value.padEnd(this.#value.length + str.length, str);
-    // console.log(`${this.#value}${str}`);
+    this.#value = this.#value + str;
   }
 
   padStart(str) {
-    this.#value.padStart(this.#value.length + str.length, str);
-    console.log(str);
-    console.log(this.#value.length);
-    console.log(str.length);
-    // return `${str}, this.#value`;
-    // console.log(`${str}${this.#value}`);
-    // this.#value.padStart(this.#value.length + 1, str);
+    this.#value = str + this.#value;
   }
 
   padBoth(str) {
-    // this.#value.padEnd(str);
-    // console.log(`${str}${this.#value}${str}`);
+    this.#value = str + this.#value + str;
   }
 }
 
